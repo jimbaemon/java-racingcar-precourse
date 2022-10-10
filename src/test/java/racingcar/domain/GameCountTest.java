@@ -26,4 +26,10 @@ public class GameCountTest {
         GameCount downCounted = gameCount.downCount();
         Assertions.assertThat(downCounted.isLeft()).isFalse();
     }
+
+    @Test
+    void 게임_횟수에_문자열_입력시_오류발생_테스트() {
+        Assertions.assertThatThrownBy(() -> new GameCount("dd"))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
 }
