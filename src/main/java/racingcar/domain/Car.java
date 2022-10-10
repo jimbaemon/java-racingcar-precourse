@@ -9,16 +9,20 @@ public class Car {
     private Location location;
 
     public Car(String name) {
-        if (name.length() > MAX_NAME_LENGTH) {
-            throw new IllegalArgumentException("자동차의 이름은 5자를 초과할 수 없습니다.");
-        }
-        this.name = name;
+        this.name = validateName(name);
         this.location = new Location();
     }
 
     public Car(String name, Location location) {
-        this.name = name;
+        this.name = validateName(name);
         this.location = location;
+    }
+
+    private String validateName(final String name){
+        if (name.length() > MAX_NAME_LENGTH) {
+            throw new IllegalArgumentException("자동차의 이름은 5자를 초과할 수 없습니다.");
+        }
+        return name;
     }
 
     public void move(MovingStrategy movingStrategy) {
