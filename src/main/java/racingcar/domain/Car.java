@@ -33,6 +33,14 @@ public class Car {
         return this.location.equals(winner.location);
     }
 
+    public String getName(){
+        return name.getName();
+    }
+
+    public int getLocation(){
+        return location.getLocation();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {

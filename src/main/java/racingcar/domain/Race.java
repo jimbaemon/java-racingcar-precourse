@@ -7,6 +7,12 @@ public class Race {
     private GameCount gameCount;
     private final MovingStrategy movingStrategy;
 
+    public Race(Players players, GameCount gameCount, MovingStrategy movingStrategy) {
+        this.players = players;
+        this.gameCount = gameCount;
+        this.movingStrategy = movingStrategy;
+    }
+
     public Race(List<Car> players, GameCount gameCount, MovingStrategy movingStrategy) {
         this.players = new Players(players);
         this.gameCount = gameCount;
