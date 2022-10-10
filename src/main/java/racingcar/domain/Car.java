@@ -3,26 +3,17 @@ package racingcar.domain;
 import java.util.Objects;
 
 public class Car {
-    private final static int MAX_NAME_LENGTH = 5;
-
-    private final String name;
+    private final CarName name;
     private Location location;
 
     public Car(String name) {
-        this.name = validateName(name);
+        this.name = new CarName(name);
         this.location = new Location();
     }
 
     public Car(String name, Location location) {
-        this.name = validateName(name);
+        this.name = new CarName(name);
         this.location = location;
-    }
-
-    private String validateName(final String name) {
-        if (name.length() > MAX_NAME_LENGTH) {
-            throw new IllegalArgumentException("자동차의 이름은 5자를 초과할 수 없습니다.");
-        }
-        return name;
     }
 
     public void move(MovingStrategy movingStrategy) {
