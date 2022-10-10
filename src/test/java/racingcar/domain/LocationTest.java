@@ -20,4 +20,10 @@ class LocationTest {
         Assertions.assertThat(AddedLocation).isEqualTo(new Location(1));
     }
 
+    @Test
+    void 위치값이_크거나_같은지_비교(){
+        Location firstLocation = new Location(3);
+        Location secondLocation = new Location(2);
+        Assertions.assertThat(firstLocation.isGreaterOrEqual(secondLocation)).isTrue();
+    }
 }
