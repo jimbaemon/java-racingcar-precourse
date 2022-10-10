@@ -1,5 +1,6 @@
 package racingcar.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Race {
@@ -23,5 +24,29 @@ public class Race {
 
     public boolean onPlay() {
         return gameCount.isLeft();
+    }
+
+    public List<Car> getWinners() {
+        Car winner = findWinner();
+        return findTieWithWinner(winner);
+    }
+
+    private Car findWinner() {
+        Car winner = null;
+        for(int i = 0; i < players.size()-1; i++){
+            Car car = players.get(i);
+            winner = car.whoIsWinner(players.get(i+1));
+        }
+        return winner;
+    }
+
+    private List<Car> findTieWithWinner(Car winner){
+        List<Car> winners = new ArrayList<>();
+        for (Car player : players) {
+            if(player.isTie(winner)){
+                winners.add(player);
+            }
+        }
+        return winners;
     }
 }
