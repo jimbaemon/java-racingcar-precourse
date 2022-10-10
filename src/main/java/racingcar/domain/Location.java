@@ -17,6 +17,10 @@ public class Location {
         return new Location(location + 1);
     }
 
+    public boolean isGreaterOrEqual(Location location) {
+        return this.location >= location.location;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
