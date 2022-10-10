@@ -33,11 +33,11 @@ public class Car {
         return this.location.equals(winner.location);
     }
 
-    public String getName(){
+    public String getName() {
         return name.getName();
     }
 
-    public int getLocation(){
+    public int getLocation() {
         return location.getLocation();
     }
 

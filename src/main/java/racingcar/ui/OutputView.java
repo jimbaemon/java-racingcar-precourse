@@ -44,6 +44,6 @@ public class OutputView {
     }
 
     public static void printPlayerNameException(IllegalArgumentException e) {
-        System.out.printf("%s%s\n",ERROR_MESSAGE, e.getMessage());
+        System.out.printf("%s%s\n", ERROR_MESSAGE, e.getMessage());
     }
 }

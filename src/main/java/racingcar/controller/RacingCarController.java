@@ -22,7 +22,7 @@ public class RacingCarController {
     private Players getPlayers() {
         try {
             return new Players(InputView.inputPlayers());
-        }catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             OutputView.printPlayerNameException(e);
             return getPlayers();
         }

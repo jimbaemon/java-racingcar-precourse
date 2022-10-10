@@ -9,7 +9,7 @@ public class Players {
 
     private final List<Car> players;
 
-    public Players(final String players){
+    public Players(final String players) {
         String[] split = players.split(PLAYER_SEPARATOR);
         ArrayList<Car> playerList = new ArrayList<>();
         for (String carName : split) {
@@ -39,14 +39,14 @@ public class Players {
 
     private Car findWinner() {
         Car winner = null;
-        for(int i = 0; i < players.size()-1; i++){
+        for (int i = 0; i < players.size() - 1; i++) {
             Car car = players.get(i);
-            winner = car.whoIsWinner(players.get(i+1));
+            winner = car.whoIsWinner(players.get(i + 1));
         }
         return winner;
     }
 
-    private List<Car> findTieWithWinner(Car winner){
+    private List<Car> findTieWithWinner(Car winner) {
         List<Car> winners = new ArrayList<>();
         for (Car player : players) {
             getIfTie(winner, winners, player);
@@ -55,7 +55,7 @@ public class Players {
     }
 
     private void getIfTie(Car winner, List<Car> winners, Car player) {
-        if(player.isTie(winner)){
+        if (player.isTie(winner)) {
             winners.add(player);
         }
     }
