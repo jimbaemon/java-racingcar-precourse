@@ -16,14 +16,14 @@ public class GameCountTest {
     @Test
     void 경기_횟수_감소() {
         GameCount gameCount = new GameCount(5);
-        GameCount downCounted = gameCount.countDown();
+        GameCount downCounted = gameCount.downCount();
         Assertions.assertThat(downCounted).isEqualTo(new GameCount(4));
     }
 
     @Test
     void 경기_횟수_잔여_여부_확인() {
         GameCount gameCount = new GameCount(1);
-        GameCount downCounted = gameCount.countDown();
+        GameCount downCounted = gameCount.downCount();
         Assertions.assertThat(downCounted.isLeft()).isFalse();
     }
 }
