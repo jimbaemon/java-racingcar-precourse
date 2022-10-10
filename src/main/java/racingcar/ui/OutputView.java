@@ -5,6 +5,7 @@ import java.util.StringJoiner;
 import racingcar.domain.Car;
 
 public class OutputView {
+    private static final String ERROR_MESSAGE = "[ERROR]";
     private static final String ROAD = "-";
     private static final String WINNERS_JOINER = ", ";
 
@@ -40,5 +41,9 @@ public class OutputView {
             stringJoiner.add(winner.getName());
         }
         return stringJoiner.toString();
+    }
+
+    public static void printPlayerNameException(IllegalArgumentException e) {
+        System.out.printf("%s%s\n",ERROR_MESSAGE, e.getMessage());
     }
 }
