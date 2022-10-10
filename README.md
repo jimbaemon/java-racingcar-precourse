@@ -23,3 +23,15 @@
 * 자동차의 이름을 입력받는다.
 * 경주마다 자동차 이름과 전진한 위치를 출력해 준다.
 * 자동차의 경주 결과와 우승자를 출력해 준다.
+
+## 제약 조건
+* 경주의 실행 시작점은 racinggame.Applcation의 main() 이다.
+* JDK8 에서 정상 동작 해야 한다.
+* 라이브러리에서 사용하는 Random과 Console 사용
+* 자바 코드 컨벤션을 지킨다.
+    * •https://github.com/woowacourse/woowacourse-docs/tree/master/styleguide/java
+* indent는 depth가 2가 넘지 않도록 한다.
+* Stream 사용 금지. 람다는 가능
+* else 사용 금지
+* 함수는 10줄을 넘지 않는다.
+* 일급 콜렉션 사용과, 원시값 포장
