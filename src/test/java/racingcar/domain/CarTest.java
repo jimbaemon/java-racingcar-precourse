@@ -21,7 +21,6 @@ public class CarTest {
                 .hasMessage("자동차의 이름은 5자를 초과할 수 없습니다.");
     }
 
-
     @Test
     void 자동차의_전진조건에_충족하면_전진하도록_한다() {
         Car car = new Car("붕붕이");
@@ -30,15 +29,15 @@ public class CarTest {
         Assertions.assertThat(car).isEqualTo(new Car("붕붕이", new Location(1)));
     }
 
-    /*
     @Test
-    void 자동차를_비교하여_우승자_조회(){
+    void 자동차를_비교하여_우승자_조회() {
         Car 붕붕이 = new Car("붕붕이", new Location(3));
         Car 씽씽이 = new Car("씽씽이", new Location(1));
-        Car winner = 붕붕이.whoIsWinnner(씽씽이);
+        Car winner = 붕붕이.whoIsWinner(씽씽이);
         Assertions.assertThat(winner).isEqualTo(붕붕이);
     }
 
+        /*
     @Test
     void 자동차가_동일한_값을_가지고_있는지_확인(){
         Car 붕붕이 = new Car("붕붕이", new Location(1));

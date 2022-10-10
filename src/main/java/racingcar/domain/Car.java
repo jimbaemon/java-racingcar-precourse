@@ -18,7 +18,7 @@ public class Car {
         this.location = location;
     }
 
-    private String validateName(final String name){
+    private String validateName(final String name) {
         if (name.length() > MAX_NAME_LENGTH) {
             throw new IllegalArgumentException("자동차의 이름은 5자를 초과할 수 없습니다.");
         }
@@ -29,6 +29,13 @@ public class Car {
         if (movingStrategy.isMovable()) {
             this.location = location.add();
         }
+    }
+
+    public Car whoIsWinner(Car competitor) {
+        if (this.location.isGreaterOrEqual(competitor.location)) {
+            return this;
+        }
+        return competitor;
     }
 
     @Override
@@ -47,4 +54,5 @@ public class Car {
     public int hashCode() {
         return Objects.hash(name, location);
     }
+
 }
