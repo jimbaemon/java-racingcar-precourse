@@ -37,11 +37,10 @@ public class CarTest {
         Assertions.assertThat(winner).isEqualTo(붕붕이);
     }
 
-        /*
     @Test
     void 자동차가_동일한_값을_가지고_있는지_확인(){
         Car 붕붕이 = new Car("붕붕이", new Location(1));
         Car 씽씽이 = new Car("씽씽이", new Location(1));
         Assertions.assertThat(붕붕이.isTie(씽씽이)).isTrue();
-    }*/
+    }
 }

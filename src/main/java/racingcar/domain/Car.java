@@ -38,6 +38,10 @@ public class Car {
         return competitor;
     }
 
+    public boolean isTie(Car competitor) {
+        return this.location.equals(competitor.location);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
