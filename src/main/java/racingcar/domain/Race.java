@@ -17,6 +17,11 @@ public class Race {
         for (Car player : players) {
             player.move(movingStrategy);
         }
+        this.gameCount = gameCount.downCount();
         return players;
+    }
+
+    public boolean onPlay() {
+        return gameCount.isLeft();
     }
 }
