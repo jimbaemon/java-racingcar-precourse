@@ -23,7 +23,7 @@ public class CarTest {
 
 
     @Test
-    void 자동차의_전진조건에_충족하면_전진하도록_한다(){
+    void 자동차의_전진조건에_충족하면_전진하도록_한다() {
         Car car = new Car("붕붕이");
         AlwaysMovingStrategy movingStrategy = new AlwaysMovingStrategy();
         car.move(movingStrategy);
