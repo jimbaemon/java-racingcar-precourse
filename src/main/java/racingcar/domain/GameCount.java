@@ -11,6 +11,14 @@ public class GameCount {
         this.count = count;
     }
 
+    public GameCount(String inputGameCount) {
+        try {
+            this.count = Integer.parseInt(inputGameCount);
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException("시도 횟수는 숫자여야 한다.");
+        }
+    }
+
     public GameCount downCount() {
         return new GameCount(count - 1);
     }

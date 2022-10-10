@@ -43,7 +43,7 @@ public class OutputView {
         return stringJoiner.toString();
     }
 
-    public static void printPlayerNameException(IllegalArgumentException e) {
+    public static void printIllegalArgumentException(IllegalArgumentException e) {
         System.out.printf("%s%s\n", ERROR_MESSAGE, e.getMessage());
     }
 }

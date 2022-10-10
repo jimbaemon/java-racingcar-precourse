@@ -10,7 +10,7 @@ import racingcar.ui.OutputView;
 public class RacingCarController {
     public void playGame() {
         Race race = new Race(getPlayers(),
-                new GameCount(InputView.inputGameCount()),
+                getGameCount(),
                 new RandomMovingStrategy());
         OutputView.printGameResult();
         while (race.onPlay()) {
@@ -19,11 +19,20 @@ public class RacingCarController {
         OutputView.printWinners(race.getWinners());
     }
 
+    private GameCount getGameCount() {
+        try {
+            return new GameCount(InputView.inputGameCount());
+        } catch (IllegalArgumentException e) {
+            OutputView.printIllegalArgumentException(e);
+            return getGameCount();
+        }
+    }
+
     private Players getPlayers() {
         try {
             return new Players(InputView.inputPlayers());
         } catch (IllegalArgumentException e) {
-            OutputView.printPlayerNameException(e);
+            OutputView.printIllegalArgumentException(e);
             return getPlayers();
         }
     }

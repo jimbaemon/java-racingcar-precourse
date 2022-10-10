@@ -15,9 +15,8 @@ public class InputView {
         return readLine();
     }
 
-    public static int inputGameCount() {
+    public static String inputGameCount() {
         System.out.println("시도할 회수는 몇회인가요?");
-        String readLine = readLine();
-        return Integer.parseInt(readLine);
+        return readLine();
     }
 }
