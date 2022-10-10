@@ -14,12 +14,14 @@ public class CarTest {
         Assertions.assertThat(car).isEqualTo(new Car(carName));
     }
 
-/*    @Test
+    @Test
     void 자동차의_이름이_5자를_초과하면_에러발생() {
         Assertions.assertThatThrownBy(() -> new Car("붕붕쌩썡씽씽이"))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("자동차의 이름은 5자를 초과할 수 없습니다.");
     }
+
+    /*
 
     @Test
     void 자동차의_전진조건에_충족하면_전진하도록_한다(){
