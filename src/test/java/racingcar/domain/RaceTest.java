@@ -17,8 +17,8 @@ public class RaceTest {
         Assertions.assertThat(cars)
                 .isEqualTo(
                         Arrays.asList(
-                            new Car("씽씽이", new Location(1)),
-                            new Car("쌩썡이", new Location(1))
+                                new Car("씽씽이", new Location(1)),
+                                new Car("쌩썡이", new Location(1))
                         ));
     }
 
@@ -33,7 +33,7 @@ public class RaceTest {
     }
 
     @Test
-    void 경주의_우승자를_조회한다(){
+    void 경주의_우승자를_조회한다() {
         Race race = new Race(
                 Arrays.asList(new Car("씽씽이"), new Car("쌩썡이")),
                 new GameCount(1),

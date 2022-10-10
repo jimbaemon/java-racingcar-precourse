@@ -29,8 +29,8 @@ public class Car {
         return competitor;
     }
 
-    public boolean isTie(Car competitor) {
-        return this.location.equals(competitor.location);
+    public boolean isTie(Car winner) {
+        return this.location.equals(winner.location);
     }
 
     @Override
