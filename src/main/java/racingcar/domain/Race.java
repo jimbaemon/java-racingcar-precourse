@@ -43,10 +43,14 @@ public class Race {
     private List<Car> findTieWithWinner(Car winner){
         List<Car> winners = new ArrayList<>();
         for (Car player : players) {
-            if(player.isTie(winner)){
-                winners.add(player);
-            }
+            getIfTie(winner, winners, player);
         }
         return winners;
+    }
+
+    private void getIfTie(Car winner, List<Car> winners, Car player) {
+        if(player.isTie(winner)){
+            winners.add(player);
+        }
     }
 }
